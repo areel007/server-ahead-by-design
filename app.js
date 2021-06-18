@@ -31,7 +31,7 @@ app.use(loginRoute)
 app.use(getUsersRoute)
 
 mongoose.connect(
-	'process.env.DB',
+	`${process.env.DB}`,
 	{ useNewUrlParser: true , useUnifiedTopology: true },
 	() => console.log('Connected to DB')
 )
