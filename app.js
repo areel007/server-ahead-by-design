@@ -1,3 +1,5 @@
+require('dotenv').config({path: __dirname + '/.env'})
+
 const express = require('express')
 
 const app = express()
@@ -9,8 +11,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const passport = require('passport');
-
-require('dotenv').config({path: __dirname + '/.env'})
 
 const PORT = process.env.PORT || 4000
 
