@@ -9,9 +9,10 @@ exports.registerUser = async (req, res, next) => {
 	try {
 		let user = await User.findOne({ username });
 		if (user) {
-			return res.status(400).json({
+			res.status(400).json({
 				msg: "User already exists.",
 			});
+			return
 		}
 		user = new User({
 			username,
